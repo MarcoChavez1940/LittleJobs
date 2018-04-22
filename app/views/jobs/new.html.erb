@@ -1,0 +1,18 @@
+<p>Hola desde mi vista</p>
+
+<%= form_for :job, url: jobs_path do |f| %>
+    <%= f.label :name %> 
+    <%= f.text_field :name %> <br>
+
+    <%= f.label :description %> 
+    <%= f.text_field :description %> <br>
+
+    <%= f.label :paymentAmount %>
+    <%= f.text_field :paymentAmount %> <br>
+
+    <%= f.label :ubication %>
+    <%= f.text_field :ubication %> <br>
+
+    <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,9 @@
+<p>Hola desde mi vista</p>
+
+<%= form_for :chat, url: chats_path do |f| %>
+    <%= f.label :topic %> 
+    <%= f.text_field :topic %> <br>
+
+    <%= f.submit %>
+
+<% end %>
