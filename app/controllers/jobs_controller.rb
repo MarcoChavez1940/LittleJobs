@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
     def index
-        @jobs = Job.all
+        @jobs = Job.where user_id: current_user.id
     end
 
     def new
@@ -9,7 +9,10 @@ class JobsController < ApplicationController
 
     def create
         #render plain: params[:job].inspect
-        @job = Job.new job_params
+        #@job = Job.new job_params
+
+        @job = current_user.jobs.new job_params
+
         @job.save
 
         redirect_to @job
